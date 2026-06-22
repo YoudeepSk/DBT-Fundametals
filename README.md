@@ -1,98 +1,138 @@
-# DBT Fundamentals – Legacy Model Refactoring
 
-This project demonstrates how a legacy SQL model can be refactored into a modern dbt architecture using staging, intermediate, and mart layers.
+<img width="1227" height="622" alt="image" src="https://github.com/user-attachments/assets/8c358c4e-efe1-400e-b5e1-2283eecd135d" />
 
----
+# DBT Fundamentals – Legacy SQL Refactoring
 
-## Project Goal
+## Project Overview
 
-The project began with a single legacy model:
+DBT guided project - https://learn.getdbt.com/courses/refactoring-sql-for-modularity-vs-code
 
-📄 [`customer_orders_legacy.sql`](./Refactor/models/legacy/customer_orders_legacy.sql)
+This project demonstrates how a monolithic legacy SQL model can be refactored into a modern dbt architecture using layered data modeling techniques.
 
-The objective was to transform this monolithic SQL query into a modular, maintainable dbt project.
+The project begins with a single legacy model and progressively transforms it into:
 
----
-
-## Refactoring Journey
-
-### 1. Legacy Model
-
-The original model contained all business logic in one SQL file.
-
-➡️ [`models/legacy/customer_orders_legacy.sql`](./Refactor/models/legacy/customer_orders_legacy.sql)
+- Sources
+- Staging models
+- Intermediate models
+- Final marts
+- Data audits
 
 ---
 
-### 2. Source Data
+# Starting Point
 
-Raw source tables:
+The original business logic existed in one large SQL file:
 
-- `jaffle_shop.customers`
-- `jaffle_shop.orders`
-- `stripe.payment`
+📄 [customer_orders_legacy.sql](./Refactor/models/legacy/customer_orders_legacy.sql)
 
----
-
-### 3. Staging Layer
-
-The staging layer standardizes and cleans source data.
-
-- [`stg_customers.sql`](./Refactor/models/staging/stg_customers.sql)
-- [`stg_orders.sql`](./Refactor/models/staging/stg_orders.sql)
-- [`stg_payments.sql`](./Refactor/models/staging/stg_payments.sql)
+This model was difficult to maintain, test, and extend.
 
 ---
 
-### 4. Intermediate Layer
+# Source Layer
+
+Source definitions establish the connection to the raw source tables.
+
+### Jaffle Shop Sources
+
+📄 [jaffle_shop/sources.yml](./Refactor/models/staging/jaffle_shop/sources.yml)
+
+### Stripe Sources
+
+📄 [stripe/sources.yml](./Refactor/models/staging/stripe/sources.yml)
+
+The source files define:
+
+- customers
+- orders
+- payments
+
+and provide documentation and lineage within dbt.
+
+---
+
+# Staging Layer
+
+The staging layer standardizes and cleans raw data.
+
+### Jaffle Shop
+
+- 📄 [stg_customers.sql](./Refactor/models/staging/jaffle_shop/stg_customers.sql)
+- 📄 [stg_orders.sql](./Refactor/models/staging/jaffle_shop/stg_orders.sql)
+
+### Stripe
+
+- 📄 [stg_payments.sql](./Refactor/models/staging/stripe/stg_payments.sql)
+
+Responsibilities:
+
+- Rename columns
+- Standardize naming conventions
+- Remove unnecessary fields
+- Prepare data for transformations
+
+---
+
+# Intermediate Layer
 
 Business logic is isolated into reusable models.
 
-- [`int_orders.sql`](./Refactor/models/marts/intermediate/int_orders.sql)
+📄 [int_orders.sql](./Refactor/models/marts/intermediate/int_orders.sql)
+
+This model combines order and payment information before creating the final mart.
 
 ---
 
-### 5. Final Mart
+# Final Mart Layer
 
-The final fact model produces customer order metrics.
+The final analytics model:
 
-- [`fct_customer_orders.sql`](./Refactor/models/marts/fct_customer_orders.sql)
+📄 [fct_customer_orders.sql](./Refactor/models/marts/fct_customer_orders.sql)
+
+This model produces customer order metrics used for reporting and analysis.
 
 ---
 
-### 6. Auditing
+# Auditing
 
-Two audit models were created to validate the refactored output against the legacy implementation.
+To validate the refactored models against the legacy implementation, two audit queries were created.
 
-- [`audit.sql`](./Refactor/analyses/audit.sql)
-- [`audit2.sql`](./Refactor/analyses/audit2.sql)
+- 📄 [audit.sql](./Refactor/analyses/audit.sql)
+- 📄 [audit2.sql](./Refactor/analyses/audit2.sql)
 
-The project also utilizes the `audit_helper` package to compare datasets and validate results.
+The project also uses the **audit_helper** package to compare model outputs and verify that the refactored logic produces identical results.
 
 ---
 
 # Project Structure
 
 ```text
-models/
+Refactor/
 │
-├── legacy/
-│   └── customer_orders_legacy.sql
+├── analyses/
+│   ├── audit.sql
+│   └── audit2.sql
 │
-├── staging/
-│   ├── stg_customers.sql
-│   ├── stg_orders.sql
-│   └── stg_payments.sql
-│
-└── marts/
-    ├── intermediate/
-    │   └── int_orders.sql
-    │
-    └── fct_customer_orders.sql
-
-analyses/
-├── audit.sql
-└── audit2.sql
+├── models/
+│   │
+│   ├── legacy/
+│   │   └── customer_orders_legacy.sql
+│   │
+│   ├── staging/
+│   │   ├── jaffle_shop/
+│   │   │   ├── sources.yml
+│   │   │   ├── stg_customers.sql
+│   │   │   └── stg_orders.sql
+│   │   │
+│   │   └── stripe/
+│   │       ├── sources.yml
+│   │       └── stg_payments.sql
+│   │
+│   └── marts/
+│       ├── intermediate/
+│       │   └── int_orders.sql
+│       │
+│       └── fct_customer_orders.sql
 ```
 
 ---
@@ -111,35 +151,3 @@ analyses/
 - Git & GitHub
 - audit_helper package
 
----
-
-# Skills Demonstrated
-
-✅ Legacy SQL refactoring
-
-✅ Data modeling
-
-✅ Layered dbt architecture
-
-✅ Source-to-mart lineage
-
-✅ Data validation and auditing
-
-✅ Git version control
-
-✅ Documentation and project organization
-
----
-
-# Running the Project
-
-```bash
-dbt deps
-dbt debug
-dbt run
-dbt test
-dbt docs generate
-dbt docs serve
-```
-
-<img width="1227" height="622" alt="image" src="https://github.com/user-attachments/assets/8c358c4e-efe1-400e-b5e1-2283eecd135d" />
