@@ -1,0 +1,10 @@
+# ignore secrets
+profiles.yml
+*.p8
+*.pem
+
+# ignore generated/local files
+target/
+dbt_packages/
+logs/
+.venv/

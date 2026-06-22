@@ -1,0 +1,150 @@
+[0m12:30:58.070134 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 12:30:58.305950 | 59701fca-dd4f-4b39-bc56-a3b99e784978 ==============================
+[0m12:30:58.305950 [info ] [MainThread]: Running with dbt=1.11.11
+[0m12:30:58.307626 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Youdeep\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:31:27.585060 [debug] [MainThread]: Starter project path: C:\Users\Youdeep\OneDrive\Desktop\DBT Fundametals\.venv\Lib\site-packages\dbt\include\starter_project
+[0m12:31:27.643756 [info ] [MainThread]: 
+Your new dbt project "Refactor" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:31:27.644899 [info ] [MainThread]: Setting up your profile.
+[0m12:31:30.488210 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m12:31:30.488540 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m12:31:30.488705 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m12:40:17.670145 [info ] [MainThread]: Profile Refactor written to C:\Users\Youdeep\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:40:17.677479 [debug] [MainThread]: Command `dbt init` succeeded at 12:40:17.677197 after 559.68 seconds
+[0m12:40:17.678666 [debug] [MainThread]: Flushing usage events
+[0m12:42:06.083346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198EBD26510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198E8A5F750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198ED107ED0>]}
+
+
+============================== 12:42:06.092064 | 6abbc6cb-a6e7-49cd-9e83-677a8f362b67 ==============================
+[0m12:42:06.092064 [info ] [MainThread]: Running with dbt=1.11.11
+[0m12:42:06.092836 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Youdeep\\OneDrive\\Desktop\\DBT Fundametals', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:42:06.139947 [info ] [MainThread]: dbt version: 1.11.11
+[0m12:42:06.140316 [info ] [MainThread]: python version: 3.13.14
+[0m12:42:06.140568 [info ] [MainThread]: python path: C:\Users\Youdeep\OneDrive\Desktop\DBT Fundametals\.venv\Scripts\python.exe
+[0m12:42:06.140783 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m12:42:06.571961 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m12:42:06.572276 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m12:42:06.572459 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m12:42:06.621994 [info ] [MainThread]: Using profiles dir at C:\Users\Youdeep\OneDrive\Desktop\DBT Fundametals
+[0m12:42:06.622482 [info ] [MainThread]: Using profiles.yml file at C:\Users\Youdeep\OneDrive\Desktop\DBT Fundametals\profiles.yml
+[0m12:42:06.622744 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Youdeep\OneDrive\Desktop\DBT Fundametals\dbt_project.yml
+[0m12:42:06.623564 [info ] [MainThread]: adapter type: snowflake
+[0m12:42:06.623873 [info ] [MainThread]: adapter version: 1.11.5
+[0m12:42:06.624177 [info ] [MainThread]: Configuration:
+[0m12:42:06.624435 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:42:06.624674 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:42:06.624961 [info ] [MainThread]: Required dependencies:
+[0m12:42:06.625204 [debug] [MainThread]: Executing "git --help"
+[0m12:42:06.657033 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:42:06.657319 [debug] [MainThread]: STDERR: "b''"
+[0m12:42:06.657538 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:42:06.657738 [info ] [MainThread]: Connection:
+[0m12:42:06.657934 [info ] [MainThread]:   account: ueoeiod-yg90860
+[0m12:42:06.658103 [info ] [MainThread]:   user: admin
+[0m12:42:06.658249 [info ] [MainThread]:   database: refactoring
+[0m12:42:06.658398 [info ] [MainThread]:   warehouse: compute_wh
+[0m12:42:06.658543 [info ] [MainThread]:   role: Transformer
+[0m12:42:06.658779 [info ] [MainThread]:   schema: demo
+[0m12:42:06.658972 [info ] [MainThread]:   authenticator: None
+[0m12:42:06.659139 [info ] [MainThread]:   oauth_client_id: None
+[0m12:42:06.659289 [info ] [MainThread]:   query_tag: None
+[0m12:42:06.659426 [info ] [MainThread]:   client_session_keep_alive: False
+[0m12:42:06.659707 [info ] [MainThread]:   host: None
+[0m12:42:06.659957 [info ] [MainThread]:   port: None
+[0m12:42:06.660134 [info ] [MainThread]:   proxy_host: None
+[0m12:42:06.660304 [info ] [MainThread]:   proxy_port: None
+[0m12:42:06.660498 [info ] [MainThread]:   protocol: None
+[0m12:42:06.660714 [info ] [MainThread]:   connect_retries: 1
+[0m12:42:06.660885 [info ] [MainThread]:   connect_timeout: None
+[0m12:42:06.661047 [info ] [MainThread]:   retry_on_database_errors: False
+[0m12:42:06.661208 [info ] [MainThread]:   retry_all: False
+[0m12:42:06.661503 [info ] [MainThread]:   insecure_mode: False
+[0m12:42:06.661826 [info ] [MainThread]:   reuse_connections: True
+[0m12:42:06.662093 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m12:42:06.662277 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m12:42:06.662678 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m12:42:06.870957 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m12:42:10.838089 [debug] [MainThread]: Using snowflake connection "debug"
+[0m12:42:10.838668 [debug] [MainThread]: On debug: select 1 as id
+[0m12:42:10.839258 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:42:10.839850 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m12:42:10.840205 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m12:42:10.840864 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m12:42:10.841581 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m12:42:10.842079 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Youdeep\OneDrive\Desktop\DBT Fundametals\dbt_project.yml> not found
+
+[0m12:42:10.842587 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  [Errno 2] No such file or directory: '"-----BEGIN ENCRYPTED PRIVATE KEY-----\\nMIIFNTBfBgkqhkiG9w0BBQ0wUjAxBgkqhkiG9w0BBQwwJAQQ82ZxDlrT3JiT3ZMP\\nwDuK1wICCAAwDAYIKoZIhvcNAgkFADAdBglghkgBZQMEASoEEP8lbFnD5HA9kfXA\\nRM4pFFkEggTQAhvW/5FRhiKfgmrTYXDfFNJ603YSRf30xrVVZRzeUZEmpKG5Ng3Y\\nHULvN1k14fDGNzKUhgvntbc80G7+mKCikrqa1ip+sgwt7tJI/l2Ltq5iK4Z4Hf/8\\nEybWCUomSX6OmWc0Q/0FNMkIKToFWKAhZBm1EAOrDIgAA+ZKz9666lbgD9Hu5+h+\\nITgIHWXIWlgF1Z53KvNxJyr17XVw/XVDZCXcE2wIiEa80oR8ppNE8h4elzUoie2r\\nDlMNT6IZxwkOwIJEmTLqsYkBDhle+YpFFrnxuGWgPYTFVfh95TMBb82PCE8j4dnX\\nw1BTP04JFgfifyOB1KWwRyxueY4iYV+AV5pRI63IvZk+L8V+sIlBAEKNvcooOuVs\\n/gLhuIl29y2L5Neivv0vMrEtIXlGQcGMvOOnMBcu9908an/yOjIFiASlXZZIbmDP\\npCmvlRYBqILHWuVdOaoX74f3mMVkcHS+BIAySjtcO0p6kmuBsUmBz07Q2b3ll6pV\\naWla+9WXxKIovnIL+4C59WhMX848fxpRCA0aRa4bqjq8xgXC5ynYkmh36MlCtCof\\nfv0CMhnk+2W0EB243Yhmt6FbKfhqFU1HtjiLD2KCi/r7vhf7RFg+J+DY312X912V\\nVd21EJILfrrPozjdn6zksHvaQ51Vqh5LfrCJqILJv+lAGhaGsbs/gSK3rP8yGvja\\ntml5/I1dDIhhuURbYiabuJyWM2bbnsAuVSC4hnTcFcDXJxOBdNGS6+1nbYh85I2Y\\n2SgBEGkrIP+b9RY62LSSAyGlJTZA7s5Wn61op/YIZxhtOMy+4uji+vZhf2excYS4\\nCQqDXZBSJriQ9El3DBUjkKRGbS7g4QCtn5YDdg6I7fI5mD8UHoZTPW/JxW2Osony\\n+VrG+ytMEFtVFcksDCn75AI7WIo2JO0o63PJvumIalaZXrLqr7QjK6A9jYBq+kbV\\njwIAQyIw1NgVO40sp9t7arfO3f7r0UHkff6nNEYVa71QxDeAdCv3HM0kMC5tWSnQ\\nxXlyp+9VvN9P6tLCIxGBstnPHlZJcr9XXKn3zz2FGoK8d+x565cuaZ46kINXx0wv\\nOAQddIHHbhta3J8fMxZgXOvw2xrf+PKOcdDJqPAZljNod2lZXsmdHEsW11+qRCcn\\nWgqVnKfv2qQNHoIkVS0GygzvjUuLkRD8k/cktf9HHywUohkD32jcBxKDQ/Gar9wo\\n+sJ+VRt3lAm94zsIwNbG9XJN4xUBY9CrSF3KFhJxNN55h+iBuhw0rxECpZ+E47yF\\naeHgR+wfVbY6/7B1h4xE0aQY4i6HJ/U5olE6EPdZhNskwOuVo56xyrX7IfoetPy9\\nsx/SpHuIQqQ4cN5xDsI8Fmrr28eQRzKW94QCvnLSNkmkzXzVTxSiuVbK1BsStVvI\\nlyzBpN7hMPwItNY9cElGRuzMTniy0wi93xEGHMR5YUJJGLCsZeleUEiIengHD4rJ\\nAzgcLubHFZnZhaMNEmLFiNHABbk2YoQxECUL1F9JZ0Z43gB0E8Ipwo/sAnvJfg0C\\nJKAZ4cfbsF7ifYiI8uk6QLNFssv2FCMky8mpZJvzKf0NJoM9OKRLgjq6bHZsyrLi\\nyzhGy70lf9yO0GOAHrsT+MoVvRCOdnPd88gOqacl63WQ5Ru/jZOrBDA=\\n-----END ENCRYPTED PRIVATE KEY-----\\n"'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m12:42:10.844228 [debug] [MainThread]: Command `dbt debug` failed at 12:42:10.844048 after 5.12 seconds
+[0m12:42:10.844674 [debug] [MainThread]: Connection 'debug' was left open.
+[0m12:42:10.845093 [debug] [MainThread]: On debug: No close available on handle
+[0m12:42:10.845491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198EF522650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198EF555A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198EF3F7F00>]}
+[0m12:42:10.846007 [debug] [MainThread]: Flushing usage events
+[0m12:42:12.654495 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:43:56.422752 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 12:43:56.650451 | 6f0fd1f1-9e74-45e5-8aa4-7b72fb82515f ==============================
+[0m12:43:56.650451 [info ] [MainThread]: Running with dbt=1.11.11
+[0m12:43:56.651053 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Youdeep\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:43:56.667969 [info ] [MainThread]: dbt version: 1.11.11
+[0m12:43:56.668352 [info ] [MainThread]: python version: 3.13.14
+[0m12:43:56.668649 [info ] [MainThread]: python path: C:\Users\Youdeep\OneDrive\Desktop\DBT Fundametals\.venv\Scripts\python.exe
+[0m12:43:56.668888 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m12:43:56.671514 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m12:43:57.044204 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m12:43:57.044525 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m12:43:57.044681 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m12:43:57.092649 [info ] [MainThread]: Using profiles dir at C:\Users\Youdeep\.dbt
+[0m12:43:57.093295 [info ] [MainThread]: Using profiles.yml file at C:\Users\Youdeep\.dbt\profiles.yml
+[0m12:43:57.093664 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Youdeep\OneDrive\Desktop\DBT Fundametals\dbt_project.yml
+[0m12:43:57.093929 [info ] [MainThread]: Configuration:
+[0m12:43:57.094160 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m12:43:57.094370 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:43:57.094662 [info ] [MainThread]: Required dependencies:
+[0m12:43:57.094934 [debug] [MainThread]: Executing "git --help"
+[0m12:43:57.128566 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:43:57.128972 [debug] [MainThread]: STDERR: "b''"
+[0m12:43:57.129207 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:43:57.129448 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m12:43:57.129872 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m12:43:57.130158 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "My_DUCK_PROJECT", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+
+
+[0m12:43:57.130454 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Youdeep\OneDrive\Desktop\DBT Fundametals\dbt_project.yml> not found
+
+[0m12:43:57.131635 [debug] [MainThread]: Command `dbt debug` failed at 12:43:57.131530 after 0.75 seconds
+[0m12:43:57.132082 [debug] [MainThread]: Flushing usage events
